@@ -28,9 +28,9 @@ Este repositorio forma parte del marco docente de estructura de datos y algoritm
 
 Los estudiantes editan esta sección para agregar sus nombres, correos electrónicos de Uniandes y especificar qué funcionalidad de proyecto implementarán.
 
-1. Nombre del estudiante No. 1, Correo electrónico del estudiante No. 1 Uniandes, Funcionalidad propiedad del estudiante No. 1.
-2. Nombre del estudiante No. 2, Correo electrónico del estudiante No. 2 Uniandes, Funcionalidad propiedad del estudiante No. 2.
-3. Nombre del estudiante No. 3, Correo electrónico del estudiante No. 3 Uniandes, Funcionalidad propiedad del estudiante No. 3.
+1. Juan Andres Ospina, j.ospinar2@uniandes.edu.co, 202614830
+2. Juan Esteban Lesmez, je.lesmesc1@uniandes.edu.co, 202614029
+3. Jose Alexander Santos Cobos , j.santosc2@uniandes.edu.co, 202613656
 
 [Volver al inicio](#laboratorio-4)
 
