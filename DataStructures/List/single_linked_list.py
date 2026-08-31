@@ -42,6 +42,7 @@ def delete_element(lista,pos):
         raise Exception('IndexError: list index out of range')
     if pos ==0:
         
+        borrado=lista["first"]
         lista["first"]=lista["first"]["next"]
         lista["size"]-=1
         if lista["size"]==0:

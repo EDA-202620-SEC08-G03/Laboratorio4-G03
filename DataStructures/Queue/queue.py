@@ -12,7 +12,7 @@ def peek (my_queue):
     if my_queue["size"] == 0:
         raise Exception('EmptyStructureError: queue is empty')
     
-    primer = my_queue["first"]
+    primer = my_queue["first"]["info"]
     return primer
 
 
@@ -21,7 +21,10 @@ def size (my_queue):
     return my_queue["size"]
 
 def dequeue(my_queue):
-    x = sll.delete_element(my_queue,1)
+    if is_empty(my_queue):
+        raise Exception('EmptyStructureError: queue is empty')
+    x = sll.get_element(my_queue,0)
+    sll.delete_element(my_queue,0)
     return x
 
 def is_empty(my_queue):
