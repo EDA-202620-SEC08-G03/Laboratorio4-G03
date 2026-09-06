@@ -1,4 +1,4 @@
-from DataStructures.List import single_linked_list as sll
+from DataStructures.List import array_list as sll
 def new_stack():
     stack = sll.new_list()
     return stack
@@ -8,16 +8,16 @@ def push(my_stack,element):
 def pop(my_stack):
     if is_empty(my_stack):
         raise Exception('EmptyStructureError: stack is empty')
-    primer_elemento = sll.get_element(my_stack,sll.size(my_stack)-1)
+    primer_elemento = sll.get_element(my_stack, sll.size(my_stack) - 1)
     sll.delete_element(my_stack,sll.size(my_stack)-1)
     return primer_elemento
 def size(my_stack):
-    return my_stack["size"]
+    return sll.size(my_stack)
 def is_empty(my_stack):
     return sll.is_empty(my_stack)
     
 def top(my_stack):
     if is_empty(my_stack):
         raise Exception('EmptyStructureError: stack is empty')
-    primer = my_stack["last"]["info"]
+    primer = sll.get_element(my_stack, sll.size(my_stack) -1)
     return primer
