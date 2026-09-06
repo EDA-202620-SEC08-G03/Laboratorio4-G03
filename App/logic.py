@@ -32,7 +32,7 @@ from DataStructures.Queue import queue as q
 from DataStructures.Stack import stack as st
 from DataStructures.List import single_linked_list as sll
 
-data_dir = os.path.dirname(os.path.realpath('__file__')) + '/Data/'
+data_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'Data', 'GoodReads', '') # Se utilizó IA para solucionar el eror que daba esta línea de código
 
 """
 El controlador se encarga de mediar entre la vista y el modelo.
@@ -117,7 +117,7 @@ def load_books_to_read(catalog):
     Carga la información del archivo to_read y los agrega a la lista de libros por leer
     """
     
-    toreadfile = data_dir + './to_read'
+    toreadfile = data_dir + './to_read.csv'
     input_file = csv.DictReader(open(toreadfile, encoding='utf-8'))
     for toread in input_file:
         add_book_to_read(catalog, toread)
