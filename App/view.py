@@ -65,12 +65,18 @@ def load_data(control):
 
 def print_books_to_read(results):
     
-    if not results:
-        opcion = print("El usuario no tiene libros pendientes en su pila.")
-    else:
-        print("\nLibros por leer encontrados: \n")
-        for book in results:
-            print("Libro ID: {0}".format(book["book_id"]))
+    if not results or results.get("size", 0) == 0:
+        print("El usuario no tiene libros pendientes en su pila.")
+        return
+
+    print("\nLibros por leer encontrados: \n")
+    
+    node = results.get("first")
+    while node is not None:
+        book = node["info"]
+        print("Libro ID: {0}".format(book["book_id"]))
+        node = node.get("next")
+    
         
     
 def print_tests_results(queue_results, stack_results):

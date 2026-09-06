@@ -130,13 +130,12 @@ def get_books_stack_by_user(catalog, user_id):
     """
     Retorna una pila con los libros que un usuario tiene por leer.
     """
+    
     books_stack = st.new_stack()
     toreadlist = catalog["books_to_read"]   
-    tamaño = sll.size(toreadlist)
-    
-    for i in range(tamaño):
-        item = sll.get_element(toreadlist, i)
-        if str(item["user_id"]) == str(user_id):
+    for i in range(lt.size(toreadlist)):
+        item = lt.get_element(toreadlist, i)
+        if str(item['user_id']) == str(user_id):
             st.push(books_stack, item)
 
     return books_stack
@@ -148,10 +147,10 @@ def get_user_position_on_queue(catalog, user_id, book_id):
     """
     queue = q.new_queue()
     position = -1
-    tamaño = sll.size(catalog["books_to_read"])
+    tamaño = lt.size(catalog["books_to_read"])
     
     for i in range(tamaño):
-        item = sll.get_element(catalog["books_to_read"], i)
+        item = lt.get_element(catalog["books_to_read"], i)
         if str(item["book_id"]) == str(book_id):
             q.enqueue(queue, item)
             
