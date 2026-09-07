@@ -1,10 +1,11 @@
-from DataStructures.List import single_linked_list as sll
+from DataStructures.List import array_list as array
+
 def new_queue():
-    queue = sll.new_list()
+    queue = array.new_list()
     return queue
 
 def enqueue(queue,element):
-    sll.add_last(queue,element)
+    array.add_last(queue,element)
     return queue
 
 def peek (my_queue):
@@ -12,21 +13,21 @@ def peek (my_queue):
     if my_queue["size"] == 0:
         raise Exception('EmptyStructureError: queue is empty')
     
-    primer = sll.get_element(my_queue, 0)
+    primer = array.get_element(my_queue, 0)
     return primer
 
 
 def size (my_queue):
     
-    return sll.size(my_queue)
+    return array.size(my_queue)
 
 def dequeue(my_queue):
     if is_empty(my_queue):
         raise Exception('EmptyStructureError: queue is empty')
-    x = sll.get_element(my_queue,0)
-    sll.delete_element(my_queue,0)
+    x = array.get_element(my_queue,0)
+    array.delete_element(my_queue,0)
     return x
 
 def is_empty(my_queue):
-    y = sll.is_empty(my_queue)
+    y = array.is_empty(my_queue)
     return y
